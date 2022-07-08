@@ -14,10 +14,22 @@ int n=int.Parse(ReadLine());
 WriteLine(FourierMultiplication(m,n));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 int FourierMultiplication(int a, int b)
 {
     int result=b;
-    while(b>a)
+    if(b>a)
     {
         b--;
         result*=b;
