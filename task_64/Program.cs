@@ -32,7 +32,8 @@ int FourierMultiplication(int a, int b)
     if(b>a)
     {
         b--;
-        result*=b;
+        result*=FourierMultiplication(result, b);
+        return result;
     }
-    return result;
+    else return result; 
 }
