@@ -8,23 +8,23 @@ M = 4; N = 6. -> 120
 using static System.Console;
 
 Clear();
-Write("Введите значение м:");
+Write("Введите значение M: ");
 int m=int.Parse(ReadLine());
-Write("Введите значение n:");
+Write("Введите значение N: ");
 int n=int.Parse(ReadLine());
 if(n>=m)
 {
     int count=n-m;
     int start=m;
     int end=n;
-    WriteLine(FourierMultiplication(start, end, count));
+    WriteLine($"Произведение чисел от {start} до {end} равна: {FourierMultiplication(start, end, count)}");
 }
 else
 {
     int count=m-n;
     int start=n;
     int end = m;
-    WriteLine(FourierMultiplication(start, end, count));
+    WriteLine($"Произведение чисел от {start} до {end} равна: {FourierMultiplication(start, end, count)}");
 }
 
 int FourierMultiplication(int a, int b, int c)
