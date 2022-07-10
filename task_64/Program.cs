@@ -12,19 +12,19 @@ Write("Введите значение м:");
 int m=int.Parse(ReadLine());
 Write("Введите значение n:");
 int n=int.Parse(ReadLine());
-if(n>m)
+if(n>=m)
 {
     int count=n-m;
     int start=m;
     int end=n;
-    FourierMultiplication(start, end, count);
+    WriteLine(FourierMultiplication(start, end, count));
 }
 else
 {
     int count=m-n;
     int start=n;
     int end = m;
-    FourierMultiplication(start, end, count);
+    WriteLine(FourierMultiplication(start, end, count));
 }
 
 
@@ -39,22 +39,14 @@ else
 
 
 
-
-void FourierMultiplication(int a, int b, int c)
+int FourierMultiplication(int a, int b, int c)
 {
-    
     if(c>=0)
     {
+        b=b*a;
+        a++;
         
-        
-        WriteLine($"{a}*{b}={a*b}");
-        a=b*a;
-        b--;
-        
-        c--;
-        FourierMultiplication(a, b, c);
-        
-        
+        return FourierMultiplication(a, b, c);
     }
-    else return; 
+    else return c;
 }
