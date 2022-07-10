@@ -27,26 +27,15 @@ else
     WriteLine(FourierMultiplication(start, end, count));
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 int FourierMultiplication(int a, int b, int c)
 {
-    if(c>=0)
+    int temp;
+    if(c>0)
     {
         b=b*a;
         a++;
-        
+        c--;
         return FourierMultiplication(a, b, c);
     }
-    else return c;
+    else return b;
 }
