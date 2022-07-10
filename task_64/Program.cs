@@ -29,10 +29,11 @@ WriteLine(FourierMultiplication(m,n));
 int FourierMultiplication(int a, int b)
 {
     int result=b;
-    if(b>a)
+    if(b>=a)
     {
         b--;
         result*=FourierMultiplication(result, b);
+        
         return result;
     }
     else return result; 
